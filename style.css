@@ -1,0 +1,133 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family:sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color: azure;
+}
+.container{
+    display:;
+    background-color:darkseagreen;
+    margin:50px;
+    padding:50px;
+    border-radius:25px;
+    box-shadow:10px 20px rgb(48, 61, 48);
+}
+.title{
+    text-align:center;
+}
+.title span{
+    color:white;
+}
+.status-action{
+    display:flex;
+    font-size:25px;
+    margin-top:25px;
+    justify-content:space-around;
+}
+/*.status span{
+    
+    color:white;
+}
+.status span colour{
+    color:blue;
+}*/
+.white{
+    color:white;
+}
+.blue{
+    color:blue;
+}
+.reset{
+    cursor:pointer;
+}
+.reset:hover{
+    color:white;
+}
+.game-grid{
+    background-color:#0DA192;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap:15px;
+    margin-top:50px;
+}
+.game-cell{
+    height:100px;
+    width:100px;
+    background-color: darkseagreen;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+
+}
+.x,.o{
+    cursor:default;
+}
+.x::after{
+    content:'x';
+    font-size:100px; 
+}
+.o::after{
+    content:'o';
+    font-size:100px;
+    color:white;
+}
+.won::after{
+    color:blue;
+}
+.colour::after{
+    color:blue;
+}
+
+@media only screen and (max-width:560px) and (min-width:361px){
+    .conatiner{
+        padding:30px;
+        margin:30px;
+    }
+    .game-grid{
+        margin-top:25px;
+        grid-gap:10px;
+    }
+    .game-cell{
+        height:50px;
+        width:50px;
+    }
+    .status-action{
+        font-size:20px;
+    }
+    .x::after{
+        font-size:40px;
+    }
+    .o::after{
+        font-size:40px;
+    }
+}
+
+@media only screen and (max-width:360px){
+    .conatiner{
+        padding:5px;
+        margin: 25px;
+    }
+    .game-cell{
+        height:50px;
+        width:50px;
+    }
+    .status-action{
+        font-size:15px;
+    }
+    .x::after{
+        font-size:35px;
+    }
+    .game-grid{
+        grid-gap:5px;
+    }
+    .o::after{
+        font-size:35px;
+    }
+}
